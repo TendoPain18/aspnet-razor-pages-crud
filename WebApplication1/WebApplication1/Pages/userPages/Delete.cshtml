@@ -1,0 +1,12 @@
+﻿@page
+@model WebApplication1.Pages.userPages.DeleteModel
+@{
+}
+
+<p> Are u sure you want to delete </p>
+<p style="color:red"> @Model.u.Fname @Model.u.Lname </p>
+
+<form method="post">
+	<button class="btn btn-danger">Delete</button>
+	<a class="btn btn-primary" asp-page="/index">Cancel</a>
+</form>

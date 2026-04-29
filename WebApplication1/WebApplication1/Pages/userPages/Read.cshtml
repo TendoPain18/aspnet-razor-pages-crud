@@ -1,0 +1,26 @@
+﻿@page
+@model WebApplication1.Pages.userPages.ReadModel
+@{
+}
+
+<table class="table">
+	<tbody>
+		<tr>
+			<th> Name </th>
+			<th> @Model.u.Fname @Model.u.Lname </th>
+		</tr>
+
+		<tr>
+			<th> Email </th>
+			<th> @Model.u.Email </th>
+		</tr>
+		
+		<tr>
+			<th> Gender </th>
+			<th> @Model.u.Gender </th>
+		</tr>
+
+	</tbody>
+</table>
+
+<a asp-page="/index" class="btn btn-primary"> Go back to all users </a>

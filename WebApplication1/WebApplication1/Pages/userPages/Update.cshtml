@@ -1,0 +1,28 @@
+﻿@page
+@model WebApplication1.Pages.userPages.UpdateModel
+@{
+    string[] Genders = { "Male", "Female" };
+}
+
+<form method="post">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter your First Name" asp-for="@Model.u.Fname">
+  </div>
+  <br/>
+  <div class="form-group">
+        <input type="text" class="form-control" placeholder="Enter your Last Name" asp-for="@Model.u.Lname">
+  </div>
+  <br/>
+  <div class="form-group">
+    <input type="email" class="form-control" placeholder="Enter email" asp-for="@Model.u.Email">
+  </div>
+  <br/>
+  @foreach(var g in Genders)
+    {
+        <input type="radio" asp-for="@Model.u.Gender" value="@g"> @g
+    }
+
+    <input type="text" hidden asp-for="@Model.u.ID">
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a class="btn btn-secondary" asp-page="/index"> Cancel </a>
+</form>
